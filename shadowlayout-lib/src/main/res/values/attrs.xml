@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="l_bottomDividerHeight" format="dimension" />
+    <attr name="l_bottomDividerColor" format="color|reference" />
+    <attr name="l_bottomDividerInsetLeft" format="dimension" />
+    <attr name="l_bottomDividerInsetRight" format="dimension" />
+    <attr name="l_topDividerHeight" format="dimension" />
+    <attr name="l_topDividerColor" format="color|reference" />
+    <attr name="l_topDividerInsetLeft" format="dimension" />
+    <attr name="l_topDividerInsetRight" format="dimension" />
+    <attr name="l_leftDividerWidth" format="dimension" />
+    <attr name="l_leftDividerColor" format="color|reference" />
+    <attr name="l_leftDividerInsetTop" format="dimension" />
+    <attr name="l_leftDividerInsetBottom" format="dimension" />
+    <attr name="l_rightDividerWidth" format="dimension" />
+    <attr name="l_rightDividerColor" format="color|reference" />
+    <attr name="l_rightDividerInsetTop" format="dimension" />
+    <attr name="l_rightDividerInsetBottom" format="dimension" />
+    <attr name="l_radius" format="dimension" />
+    <attr name="l_borderColor" format="color" />
+    <attr name="l_borderWidth" format="dimension" />
+    <attr name="l_outerNormalColor" format="color|reference" />
+    <attr name="l_hideRadiusSide" format="enum">
+        <enum name="none" value="0" />
+        <enum name="top" value="1" />
+        <enum name="right" value="2" />
+        <enum name="bottom" value="3" />
+        <enum name="left" value="4" />
+    </attr>
+    <attr name="l_showBorderOnlyBeforeL" format="boolean" />
+    <attr name="l_shadowElevation" format="dimension" />
+    <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+    <attr name="l_shadowAlpha" format="float" />
+    <attr name="l_outlineInsetTop" format="dimension" />
+    <attr name="l_outlineInsetLeft" format="dimension" />
+    <attr name="l_outlineInsetRight" format="dimension" />
+    <attr name="l_outlineInsetBottom" format="dimension" />
+    <attr name="l_outlineExcludePadding" format="boolean" />
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLinearLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ShadowRelativeLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowConstraintLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+</resources>
