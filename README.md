@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/limuyang2/LShadowLayout.svg)](https://jitpack.io/#limuyang2/LShadowLayout)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 # LShadowLayout
 本控件提取自[QMUI](https://github.com/QMUI/QMUI_Android)，可以调整控件阴影的 深浅、面积、以及圆角  
 
