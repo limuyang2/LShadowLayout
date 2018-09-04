@@ -1,16 +1,18 @@
 [![](https://jitpack.io/v/limuyang2/LShadowLayout.svg)](https://jitpack.io/#limuyang2/LShadowLayout)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 # LShadowLayout
-本控件提取自[QMUI](https://github.com/QMUI/QMUI_Android)，可以调整控件阴影的 深浅、面积、以及圆角  
+### [中文](https://github.com/limuyang2/LShadowLayout/blob/master/README_CN.md)
+This control is extracted from[QMUI](https://github.com/QMUI/QMUI_Android),You can adjust the depth, area, and fillet of the control's shadow  
+>Invalid shadows in Android 4.4 and below
 
-## 预览
+## Preview
 ![](https://github.com/limuyang2/LShadowLayout/blob/master/screen/demo.gif)  
 
-### demo下载地址
+### Demo download link
 [demo apk](https://www.lanzous.com/i1smf4f)
 
-## 获取
-先在 build.gradle 的 repositories 添加：  
+## Obtain
+First add in the repositories of build.gradle :  
 ```gradle
 allprojects {
 	repositories {
@@ -20,32 +22,32 @@ allprojects {
 }
 ```
 
-再在dependencies添加：  
+Then add in dependencies:  
 ```gradle
 dependencies {
 	implementation 'com.github.limuyang2:LShadowLayout:1.0'
 }
 ```
 
-## 使用
-本库中已包含的控件有：  
-```ShadowLinearLayout```线性布局  
-```ShadowRelativeLayout```相对布局  
-```ShadowConstraintLayout```约束布局  
-仅需替换项目中对应的布局即可。  
-例如：  
+## Use
+The controls already included in this library are:  
+```ShadowLinearLayout```  
+```ShadowRelativeLayout```  
+```ShadowConstraintLayout```  
+Simply replace the corresponding layout in the project.  
+E.g：  
 ```xml
     <top.limuyang2.shadowlayoutlib.ShadowLinearLayout
         …………
         android:background="#fff"
         android:padding="12dp"
-        app:l_radius="3dp" //圆角大小
-        app:l_shadowAlpha="0.2"  //阴影值
-        app:l_shadowElevation="5dp" //Z轴高度 >
+        app:l_radius="3dp" //Rounded corner size
+        app:l_shadowAlpha="0.2"  //Shadow alpha
+        app:l_shadowElevation="5dp" //Shadow value >
         
     </top.limuyang2.shadowlayoutlib.ShadowLinearLayout>
 ```
-更多属性请查看源码
+More properties, please see the source code
 
 
 ## License
