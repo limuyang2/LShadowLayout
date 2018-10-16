@@ -24,7 +24,7 @@ allprojects {
 再在dependencies添加：  
 ```gradle
 dependencies {
-	implementation 'com.github.limuyang2:LShadowLayout:1.0.1'
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
 }
 ```
 
@@ -32,7 +32,7 @@ dependencies {
 
 ```gradle
 dependencies {
-	implementation 'com.github.limuyang2:LShadowLayout:1.0.1_androidx'
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.3_androidx'
 }
 ```
 
