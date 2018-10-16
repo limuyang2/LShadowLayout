@@ -24,11 +24,21 @@ allprojects {
 再在dependencies添加：  
 ```gradle
 dependencies {
-	implementation 'com.github.limuyang2:LShadowLayout:1.0'
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.1'
 }
 ```
 
+**如果你使用 AndroidX，请使用以下添加：**  
+
+```gradle
+dependencies {
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.1_androidx'
+}
+```
+
+
 ## 使用
+
 本库中已包含的控件有：  
 ```ShadowLinearLayout```线性布局  
 ```ShadowRelativeLayout```相对布局  
