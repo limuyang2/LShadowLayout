@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
+
 import androidx.annotation.ColorInt;
 
 /**
@@ -16,7 +17,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
     private LayoutHelper mLayoutHelper;
 
     public ShadowRelativeLayout(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public ShadowRelativeLayout(Context context, AttributeSet attrs) {

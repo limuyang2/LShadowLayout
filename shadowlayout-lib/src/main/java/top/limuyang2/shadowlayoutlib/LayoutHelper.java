@@ -15,8 +15,10 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewOutlineProvider;
-import java.lang.ref.WeakReference;
+
 import androidx.annotation.ColorInt;
+
+import java.lang.ref.WeakReference;
 
 
 /**
@@ -24,7 +26,7 @@ import androidx.annotation.ColorInt;
  * @date 2018/8/14
  * @class describe
  */
-public class LayoutHelper implements ILayout{
+public class LayoutHelper implements ILayout {
 
     // size
     private int mWidthLimit = 0;
@@ -60,18 +62,19 @@ public class LayoutHelper implements ILayout{
     private Paint mDividerPaint;
 
     // round
-    private Paint              mClipPaint;
+    private Paint mClipPaint;
     private PorterDuffXfermode mMode;
-    private int                mRadius;
-    private @ILayout.HideRadiusSide int mHideRadiusSide = HIDE_RADIUS_SIDE_NONE;
+    private int mRadius;
+    private @ILayout.HideRadiusSide
+    int mHideRadiusSide = HIDE_RADIUS_SIDE_NONE;
     private float[] mRadiusArray;
-    private RectF   mBorderRect;
+    private RectF mBorderRect;
     private int mBorderColor = 0;
     private int mBorderWidth = 1;
     private int mOuterNormalColor = 0;
     private WeakReference<View> mOwner;
     private boolean mIsOutlineExcludePadding = false;
-    private Path    mPath                    = new Path();
+    private Path mPath = new Path();
 
     // shadow
     private boolean mIsShowBorderOnlyBeforeL = true;
@@ -97,8 +100,8 @@ public class LayoutHelper implements ILayout{
 
         int radius = 0, shadow = 0;
         if (null != attrs || defAttr != 0) {
-            TypedArray ta    = context.obtainStyledAttributes(attrs, R.styleable.ShadowLayout, defAttr, 0);
-            int        count = ta.getIndexCount();
+            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ShadowLayout, defAttr, 0);
+            int count = ta.getIndexCount();
             for (int i = 0; i < count; ++i) {
                 int index = ta.getIndex(i);
                 if (index == R.styleable.ShadowLayout_android_maxHeight) {

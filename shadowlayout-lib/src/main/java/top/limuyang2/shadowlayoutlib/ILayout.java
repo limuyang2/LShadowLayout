@@ -1,10 +1,12 @@
 package top.limuyang2.shadowlayoutlib;
 
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import androidx.annotation.ColorInt;
 import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
  * @author limuyang
@@ -64,8 +66,6 @@ public interface ILayout {
     void setShadowElevation(int elevation);
 
     /**
-     *
-     *
      * @return
      */
     int getShadowElevation();
@@ -86,12 +86,14 @@ public interface ILayout {
 
     /**
      * set the layout radius
+     *
      * @param radius
      */
     void setRadius(int radius);
 
     /**
      * set the layout radius with one or none side been hidden
+     *
      * @param radius
      * @param hideRadiusSide
      */
@@ -99,6 +101,7 @@ public interface ILayout {
 
     /**
      * get the layout radius
+     *
      * @return
      */
     int getRadius();
@@ -179,7 +182,7 @@ public interface ILayout {
      * @param topDividerHeight
      * @param topDividerColor
      */
-    void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, int topDividerColor);
+    void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, @ColorInt int topDividerColor);
 
     /**
      * config the bottom divider
@@ -189,7 +192,7 @@ public interface ILayout {
      * @param bottomDividerHeight
      * @param bottomDividerColor
      */
-    void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, int bottomDividerColor);
+    void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, @ColorInt int bottomDividerColor);
 
     /**
      * config the left divider
@@ -199,7 +202,7 @@ public interface ILayout {
      * @param leftDividerWidth
      * @param leftDividerColor
      */
-    void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor);
+    void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor);
 
     /**
      * config the right divider
@@ -209,7 +212,7 @@ public interface ILayout {
      * @param rightDividerWidth
      * @param rightDividerColor
      */
-    void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor);
+    void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor);
 
     /**
      * show top divider, and hide others
@@ -219,7 +222,7 @@ public interface ILayout {
      * @param topDividerHeight
      * @param topDividerColor
      */
-    void onlyShowTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, int topDividerColor);
+    void onlyShowTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, @ColorInt int topDividerColor);
 
     /**
      * show bottom divider, and hide others
@@ -229,7 +232,7 @@ public interface ILayout {
      * @param bottomDividerHeight
      * @param bottomDividerColor
      */
-    void onlyShowBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, int bottomDividerColor);
+    void onlyShowBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, @ColorInt int bottomDividerColor);
 
     /**
      * show left divider, and hide others
@@ -239,7 +242,7 @@ public interface ILayout {
      * @param leftDividerWidth
      * @param leftDividerColor
      */
-    void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor);
+    void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor);
 
     /**
      * show right divider, and hide others
@@ -249,7 +252,7 @@ public interface ILayout {
      * @param rightDividerWidth
      * @param rightDividerColor
      */
-    void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor);
+    void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor);
 
     /**
      * after config the border, sometimes we need change the alpha of divider with animation,
@@ -257,20 +260,20 @@ public interface ILayout {
      *
      * @param dividerAlpha [0, 255]
      */
-    void setTopDividerAlpha(int dividerAlpha);
+    void setTopDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha);
 
     /**
      * @param dividerAlpha [0, 255]
      */
-    void setBottomDividerAlpha(int dividerAlpha);
+    void setBottomDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha);
 
     /**
      * @param dividerAlpha [0, 255]
      */
-    void setLeftDividerAlpha(int dividerAlpha);
+    void setLeftDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha);
 
     /**
      * @param dividerAlpha [0, 255]
      */
-    void setRightDividerAlpha(int dividerAlpha);
+    void setRightDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha);
 }

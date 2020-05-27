@@ -3,6 +3,7 @@ package top.limuyang2.shadowlayoutlib;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+
 import androidx.annotation.ColorInt;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -11,16 +12,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
  * @date 2018/8/14
  * @class describe
  */
-public class ShadowConstraintLayout extends ConstraintLayout implements ILayout{
+public class ShadowConstraintLayout extends ConstraintLayout implements ILayout {
 
     private LayoutHelper mLayoutHelper;
 
     public ShadowConstraintLayout(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public ShadowConstraintLayout(Context context, AttributeSet attrs) {
-        this(context,attrs,0);
+        this(context, attrs, 0);
     }
 
     public ShadowConstraintLayout(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -37,21 +38,25 @@ public class ShadowConstraintLayout extends ConstraintLayout implements ILayout{
         invalidate();
     }
 
+    @Override
     public void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, int bottomDividerColor) {
         mLayoutHelper.updateBottomDivider(bottomInsetLeft, bottomInsetRight, bottomDividerHeight, bottomDividerColor);
         invalidate();
     }
 
+    @Override
     public void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor) {
         mLayoutHelper.updateLeftDivider(leftInsetTop, leftInsetBottom, leftDividerWidth, leftDividerColor);
         invalidate();
     }
 
+    @Override
     public void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor) {
         mLayoutHelper.updateRightDivider(rightInsetTop, rightInsetBottom, rightDividerWidth, rightDividerColor);
         invalidate();
     }
 
+    @Override
     public void onlyShowTopDivider(int topInsetLeft, int topInsetRight,
                                    int topDividerHeight, int topDividerColor) {
         mLayoutHelper.onlyShowTopDivider(topInsetLeft, topInsetRight, topDividerHeight, topDividerColor);

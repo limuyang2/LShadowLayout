@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
 import androidx.annotation.ColorInt;
 
 /**
@@ -11,7 +12,7 @@ import androidx.annotation.ColorInt;
  * @date 2018/8/14
  * @class describe
  */
-public class ShadowLinearLayout extends LinearLayout implements ILayout  {
+public class ShadowLinearLayout extends LinearLayout implements ILayout {
     private LayoutHelper mLayoutHelper;
 
     public ShadowLinearLayout(Context context) {
