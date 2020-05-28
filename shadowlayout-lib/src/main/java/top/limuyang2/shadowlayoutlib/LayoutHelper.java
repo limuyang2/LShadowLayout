@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
 
 import java.lang.ref.WeakReference;
 
@@ -408,7 +409,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, int topDividerColor) {
+    public void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, @ColorInt int topDividerColor) {
         mTopDividerInsetLeft = topInsetLeft;
         mTopDividerInsetRight = topInsetRight;
         mTopDividerHeight = topDividerHeight;
@@ -416,7 +417,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, int bottomDividerColor) {
+    public void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, @ColorInt int bottomDividerColor) {
         mBottomDividerInsetLeft = bottomInsetLeft;
         mBottomDividerInsetRight = bottomInsetRight;
         mBottomDividerColor = bottomDividerColor;
@@ -424,7 +425,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor) {
+    public void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor) {
         mLeftDividerInsetTop = leftInsetTop;
         mLeftDividerInsetBottom = leftInsetBottom;
         mLeftDividerWidth = leftDividerWidth;
@@ -432,7 +433,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor) {
+    public void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor) {
         mRightDividerInsetTop = rightInsetTop;
         mRightDividerInsetBottom = rightInsetBottom;
         mRightDividerWidth = rightDividerWidth;
@@ -441,7 +442,7 @@ public class LayoutHelper implements ILayout {
 
     @Override
     public void onlyShowTopDivider(int topInsetLeft, int topInsetRight,
-                                   int topDividerHeight, int topDividerColor) {
+                                   int topDividerHeight, @ColorInt int topDividerColor) {
         updateTopDivider(topInsetLeft, topInsetRight, topDividerHeight, topDividerColor);
         mLeftDividerWidth = 0;
         mRightDividerWidth = 0;
@@ -450,7 +451,7 @@ public class LayoutHelper implements ILayout {
 
     @Override
     public void onlyShowBottomDivider(int bottomInsetLeft, int bottomInsetRight,
-                                      int bottomDividerHeight, int bottomDividerColor) {
+                                      int bottomDividerHeight, @ColorInt int bottomDividerColor) {
         updateBottomDivider(bottomInsetLeft, bottomInsetRight, bottomDividerHeight, bottomDividerColor);
         mLeftDividerWidth = 0;
         mRightDividerWidth = 0;
@@ -458,7 +459,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor) {
+    public void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor) {
         updateLeftDivider(leftInsetTop, leftInsetBottom, leftDividerWidth, leftDividerColor);
         mRightDividerWidth = 0;
         mTopDividerHeight = 0;
@@ -466,7 +467,7 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor) {
+    public void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor) {
         updateRightDivider(rightInsetTop, rightInsetBottom, rightDividerWidth, rightDividerColor);
         mLeftDividerWidth = 0;
         mTopDividerHeight = 0;
@@ -474,22 +475,22 @@ public class LayoutHelper implements ILayout {
     }
 
     @Override
-    public void setTopDividerAlpha(int dividerAlpha) {
+    public void setTopDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mTopDividerAlpha = dividerAlpha;
     }
 
     @Override
-    public void setBottomDividerAlpha(int dividerAlpha) {
+    public void setBottomDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mBottomDividerAlpha = dividerAlpha;
     }
 
     @Override
-    public void setLeftDividerAlpha(int dividerAlpha) {
+    public void setLeftDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mLeftDividerAlpha = dividerAlpha;
     }
 
     @Override
-    public void setRightDividerAlpha(int dividerAlpha) {
+    public void setRightDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mRightDividerAlpha = dividerAlpha;
     }
 
@@ -666,7 +667,7 @@ public class LayoutHelper implements ILayout {
         }
     }
 
-    public static boolean useFeature() {
+    private static boolean useFeature() {
         return Build.VERSION.SDK_INT >= 21;
     }
 }

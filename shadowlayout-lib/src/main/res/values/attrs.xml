@@ -185,4 +185,39 @@
         <attr name="l_outlineExcludePadding" />
     </declare-styleable>
 
+    <declare-styleable name="ShadowFrameLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
 </resources>

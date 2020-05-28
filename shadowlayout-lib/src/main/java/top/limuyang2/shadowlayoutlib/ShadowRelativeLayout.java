@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
 
 /**
  * @author limuyang
@@ -33,68 +34,76 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         mLayoutHelper = new LayoutHelper(context, attrs, defStyleAttr, this);
     }
 
-    public void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, int topDividerColor) {
+    @Override
+    public void updateTopDivider(int topInsetLeft, int topInsetRight, int topDividerHeight, @ColorInt int topDividerColor) {
         mLayoutHelper.updateTopDivider(topInsetLeft, topInsetRight, topDividerHeight, topDividerColor);
         invalidate();
     }
 
-    public void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, int bottomDividerColor) {
+    @Override
+    public void updateBottomDivider(int bottomInsetLeft, int bottomInsetRight, int bottomDividerHeight, @ColorInt int bottomDividerColor) {
         mLayoutHelper.updateBottomDivider(bottomInsetLeft, bottomInsetRight, bottomDividerHeight, bottomDividerColor);
         invalidate();
     }
 
-    public void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor) {
+    @Override
+    public void updateLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor) {
         mLayoutHelper.updateLeftDivider(leftInsetTop, leftInsetBottom, leftDividerWidth, leftDividerColor);
         invalidate();
     }
 
-    public void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor) {
+    @Override
+    public void updateRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor) {
         mLayoutHelper.updateRightDivider(rightInsetTop, rightInsetBottom, rightDividerWidth, rightDividerColor);
         invalidate();
     }
 
+    @Override
     public void onlyShowTopDivider(int topInsetLeft, int topInsetRight,
-                                   int topDividerHeight, int topDividerColor) {
+                                   int topDividerHeight, @ColorInt int topDividerColor) {
         mLayoutHelper.onlyShowTopDivider(topInsetLeft, topInsetRight, topDividerHeight, topDividerColor);
         invalidate();
     }
 
+    @Override
     public void onlyShowBottomDivider(int bottomInsetLeft, int bottomInsetRight,
-                                      int bottomDividerHeight, int bottomDividerColor) {
+                                      int bottomDividerHeight, @ColorInt int bottomDividerColor) {
         mLayoutHelper.onlyShowBottomDivider(bottomInsetLeft, bottomInsetRight, bottomDividerHeight, bottomDividerColor);
         invalidate();
     }
 
-    public void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, int leftDividerColor) {
+    @Override
+    public void onlyShowLeftDivider(int leftInsetTop, int leftInsetBottom, int leftDividerWidth, @ColorInt int leftDividerColor) {
         mLayoutHelper.onlyShowLeftDivider(leftInsetTop, leftInsetBottom, leftDividerWidth, leftDividerColor);
         invalidate();
     }
 
-    public void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, int rightDividerColor) {
+    @Override
+    public void onlyShowRightDivider(int rightInsetTop, int rightInsetBottom, int rightDividerWidth, @ColorInt int rightDividerColor) {
         mLayoutHelper.onlyShowRightDivider(rightInsetTop, rightInsetBottom, rightDividerWidth, rightDividerColor);
         invalidate();
     }
 
     @Override
-    public void setTopDividerAlpha(int dividerAlpha) {
+    public void setTopDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mLayoutHelper.setTopDividerAlpha(dividerAlpha);
         invalidate();
     }
 
     @Override
-    public void setBottomDividerAlpha(int dividerAlpha) {
+    public void setBottomDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mLayoutHelper.setBottomDividerAlpha(dividerAlpha);
         invalidate();
     }
 
     @Override
-    public void setLeftDividerAlpha(int dividerAlpha) {
+    public void setLeftDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mLayoutHelper.setLeftDividerAlpha(dividerAlpha);
         invalidate();
     }
 
     @Override
-    public void setRightDividerAlpha(int dividerAlpha) {
+    public void setRightDividerAlpha(@IntRange(from = 0, to = 255) int dividerAlpha) {
         mLayoutHelper.setRightDividerAlpha(dividerAlpha);
         invalidate();
     }
@@ -111,11 +120,13 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         }
     }
 
-    public void setRadiusAndShadow(int topRadius, int shadowElevation, final float shadowAlpha) {
+    @Override
+    public void setRadiusAndShadow(int topRadius, int shadowElevation, float shadowAlpha) {
         mLayoutHelper.setRadiusAndShadow(topRadius, shadowElevation, shadowAlpha);
     }
 
-    public void setRadiusAndShadow(int topRadius, @LayoutHelper.HideRadiusSide int hideRadiusSide, int shadowElevation, final float shadowAlpha) {
+    @Override
+    public void setRadiusAndShadow(int topRadius, @LayoutHelper.HideRadiusSide int hideRadiusSide, int shadowElevation, float shadowAlpha) {
         mLayoutHelper.setRadiusAndShadow(topRadius, hideRadiusSide, shadowElevation, shadowAlpha);
     }
 
@@ -124,6 +135,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         mLayoutHelper.setRadius(radius);
     }
 
+    @Override
     public void setRadius(int radius, @LayoutHelper.HideRadiusSide int hideRadiusSide) {
         mLayoutHelper.setRadius(radius, hideRadiusSide);
     }
@@ -139,7 +151,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
     }
 
     @Override
-    public void setHideRadiusSide(int hideRadiusSide) {
+    public void setHideRadiusSide(@HideRadiusSide int hideRadiusSide) {
         mLayoutHelper.setHideRadiusSide(hideRadiusSide);
     }
 
@@ -148,6 +160,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         return mLayoutHelper.getHideRadiusSide();
     }
 
+    @Override
     public void setBorderColor(@ColorInt int borderColor) {
         mLayoutHelper.setBorderColor(borderColor);
         invalidate();
@@ -159,11 +172,13 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         invalidate();
     }
 
+    @Override
     public void setShowBorderOnlyBeforeL(boolean showBorderOnlyBeforeL) {
         mLayoutHelper.setShowBorderOnlyBeforeL(showBorderOnlyBeforeL);
         invalidate();
     }
 
+    @Override
     public boolean setWidthLimit(int widthLimit) {
         if (mLayoutHelper.setWidthLimit(widthLimit)) {
             requestLayout();
@@ -172,6 +187,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         return true;
     }
 
+    @Override
     public boolean setHeightLimit(int heightLimit) {
         if (mLayoutHelper.setHeightLimit(heightLimit)) {
             requestLayout();
@@ -180,6 +196,7 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         return true;
     }
 
+    @Override
     public void setUseThemeGeneralShadowElevation() {
         mLayoutHelper.setUseThemeGeneralShadowElevation();
     }
@@ -189,19 +206,22 @@ public class ShadowRelativeLayout extends RelativeLayout implements ILayout {
         mLayoutHelper.setOutlineExcludePadding(outlineExcludePadding);
     }
 
+    @Override
     public void setShadowElevation(int elevation) {
         mLayoutHelper.setShadowElevation(elevation);
     }
 
+    @Override
     public int getShadowElevation() {
         return mLayoutHelper.getShadowElevation();
     }
 
+    @Override
     public void setShadowAlpha(float shadowAlpha) {
         mLayoutHelper.setShadowAlpha(shadowAlpha);
     }
 
-    public void setOuterNormalColor(int color) {
+    public void setOuterNormalColor(@ColorInt int color) {
         mLayoutHelper.setOuterNormalColor(color);
     }
 
