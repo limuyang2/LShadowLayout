@@ -24,15 +24,16 @@ allprojects {
 再在dependencies添加：  
 ```gradle
 dependencies {
-	implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
+	// AndroidX
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.6'
 }
 ```
 
-**如果你使用 AndroidX，请使用以下添加：**  
+**如果你使用 Android support，请使用以下添加：**  
 
 ```gradle
 dependencies {
-	implementation 'com.github.limuyang2:LShadowLayout:1.0.3_androidx'
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.3'
 }
 ```
 
@@ -43,6 +44,7 @@ dependencies {
 ```ShadowLinearLayout```线性布局  
 ```ShadowRelativeLayout```相对布局  
 ```ShadowConstraintLayout```约束布局  
+```ShadowFrameLayout```
 仅需替换项目中对应的布局即可。  
 例如：  
 ```xml
