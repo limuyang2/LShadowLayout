@@ -26,7 +26,7 @@ Then add in dependencies:
 ```gradle
 dependencies {
         // AndroidX
-	implementation 'com.github.limuyang2:LShadowLayout:1.0.5'
+	implementation 'com.github.limuyang2:LShadowLayout:1.0.6'
 }
 ```
 **if you use `Android Support`，Please use the following:**  
