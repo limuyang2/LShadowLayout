@@ -39,9 +39,11 @@ dependencies {
 
 ## Use
 The controls already included in this library are:  
-```ShadowLinearLayout```  
-```ShadowRelativeLayout```  
-```ShadowConstraintLayout```  
+`ShadowLinearLayout`  
+`ShadowRelativeLayout`
+`ShadowConstraintLayout`
+`ShadowFrameLayout`
+
 Simply replace the corresponding layout in the project.  
 E.g：  
 ```xml
